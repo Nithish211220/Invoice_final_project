@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: snowflake_source
+    database: INVOICE
+    schema: RAW
+    tables:
+      - name: USERS
+      - name: INVOICES
+      - name: INVOICE_REPORTING_CLEANED_V2
