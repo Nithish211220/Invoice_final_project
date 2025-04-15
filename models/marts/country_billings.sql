@@ -1,8 +1,5 @@
 select
-  billing_month,
-  productname,
   country,
-  city,
 
   sum(reporting_local) as total_reporting_local,
   sum(reporting_eur) as total_reporting_eur,
@@ -10,4 +7,4 @@ select
   sum(budget_eur) as total_budget_eur
 
 from {{ ref('int_invoice_fx_converted') }}
-group by 1, 2, 3, 4
+group by 1

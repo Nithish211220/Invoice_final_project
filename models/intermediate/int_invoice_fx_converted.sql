@@ -5,6 +5,8 @@ with joined as (
     inv.invoicedate,
     date_trunc('month', cast(inv.invoicedate as date)) as billing_month,
     inv.user_id,
+    usr.firstname,
+    usr.lastname,
     usr.city,
     usr.country,
     inv.productname,
